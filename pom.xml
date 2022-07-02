@@ -4,16 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ml.gyc</groupId>
-    <artifactId>tipml</artifactId>
+    <groupId>spark.scala.test</groupId>
+    <artifactId>spark.scala.test</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
     <properties>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <encoding>UTF-8</encoding>
-        <scala.binary.version>2.11</scala.binary.version>
-        <scala.version>2.11.8</scala.version>
-        <spark.version>2.2.0</spark.version>
+        <scala.binary.version>2.13</scala.binary.version>
+        <scala.version>2.13.0</scala.version>
+        <spark.version>3.2.1</spark.version>
         <scope>provided</scope>
     </properties>
 
@@ -34,6 +37,10 @@
             <url>http://repo.hortonworks.com/content/repositories/releases/</url>
             <layout>default</layout>
         </repository>
+<!--        <repository>
+        <id>cloudera</id>
+        <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>-->
     </repositories>
 
     <dependencies>
@@ -52,12 +59,12 @@
             <scope>${scope}</scope>
         </dependency>
 
-        <dependency>
+ <!--       <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-mllib_${scala.binary.version}</artifactId>
             <version>${spark.version}</version>
             <scope>${scope}</scope>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
